@@ -20,6 +20,12 @@ If the original `X Viral Monitor` Chrome extension is enabled, disable it before
 
 ## Changelog
 
+### 0.2.4
+
+- Added `@updateURL` / `@downloadURL` / `@homepageURL` / `@supportURL` so
+  Tampermonkey can poll the raw GitHub URL for updates instead of relying on a
+  manual reinstall.
+
 ### 0.2.3
 
 Adapted to X's XDS frontend rewrite (verified against the live site):

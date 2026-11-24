@@ -1,12 +1,16 @@
 // ==UserScript==
 // @name         X Viral Monitor Lite
 // @namespace    local.codex.x-viral-monitor-lite
-// @version      0.2.3
+// @version      0.2.4
 // @description  X timeline velocity badges, bookmark counts, and copy tweet as Markdown. No image viewer.
 // @match        https://x.com/*
 // @match        https://pro.x.com/*
 // @run-at       document-start
 // @grant        unsafeWindow
+// @homepageURL  https://github.com/hahapkpk/x-viral-monitor-lite-userscript
+// @supportURL   https://github.com/hahapkpk/x-viral-monitor-lite-userscript/issues
+// @updateURL    https://raw.githubusercontent.com/hahapkpk/x-viral-monitor-lite-userscript/main/x-viral-monitor-lite.user.js
+// @downloadURL  https://raw.githubusercontent.com/hahapkpk/x-viral-monitor-lite-userscript/main/x-viral-monitor-lite.user.js
 // @license      MIT
 // ==/UserScript==
 
