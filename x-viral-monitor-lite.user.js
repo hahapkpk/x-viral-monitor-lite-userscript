@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         X Viral Monitor Lite
 // @namespace    local.codex.x-viral-monitor-lite
-// @version      0.2.2
+// @version      0.2.3
 // @description  X timeline velocity badges, bookmark counts, and copy tweet as Markdown. No image viewer.
 // @match        https://x.com/*
 // @match        https://pro.x.com/*
@@ -358,7 +358,15 @@
   // ---- DOM readers ----------------------------------------------------------
 
   function isTweetArticle(article) {
-    return article.tagName === 'ARTICLE' && !!article.querySelector(SEL.share);
+    if (article.tagName !== 'ARTICLE') return false;
+    // XDS markers, with the pre-XDS markers kept as a fallback so an A/B revert
+    // to the old frontend does not silently disable the whole script.
+    return !!(
+      article.querySelector(SEL.share)
+      || article.matches('[data-testid="tweet"]')
+      || article.querySelector('[data-testid="User-Name"]')
+      || article.querySelector('button[data-testid="bookmark"], button[data-testid="removeBookmark"]')
+    );
   }
 
   function getTweetArticles(root = document) {

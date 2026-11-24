@@ -20,7 +20,7 @@ If the original `X Viral Monitor` Chrome extension is enabled, disable it before
 
 ## Changelog
 
-### 0.2.2
+### 0.2.3
 
 Adapted to X's XDS frontend rewrite (verified against the live site):
 
@@ -38,6 +38,8 @@ Adapted to X's XDS frontend rewrite (verified against the live site):
 - Share menu: Base UI mounts an empty `[role=menu]` and fills items in a later commit, so
   injection now waits for the menu to populate instead of giving up on the first mutation.
 - GraphQL data is authoritative; DOM scraping only fills fields the API did not supply.
+- Tweet detection still accepts the pre-XDS markers, so an A/B revert to the old
+  frontend degrades gracefully instead of disabling the script.
 
 ### 0.1.0
 
